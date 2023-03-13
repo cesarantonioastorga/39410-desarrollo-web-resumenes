@@ -1,0 +1,73 @@
+<!--
+************************************************************************************
+*******************************  RESUMEN CLASE 3  **********************************
+*******************************  DESARROLLO WEB   **********************************
+************************************************************************************
+-->
+
+<!-- Sintaxis CSS-->
+
+selector {
+    propiedad1: valor;
+    propiedad2: valor;
+}
+
+
+<!--Padres e hijos-->
+<section> <!--Padre-->
+    <article> <!--Hijo-->
+            <h2> Título </h2>
+            <p>Lorem ipsum dolor sit amet</p> 
+    <article> 
+<section> 
+
+section article {
+    background-color: #cccccc;
+    width: 500px;
+    height: 500px;
+}
+
+
+<!--Insertar CSS-->
+<style>
+    section article {
+        background-color: #cccccc;
+        width: 500px;
+        height: 500px;
+    }
+</style><!--Etiqueta style-->
+
+<p style="color: red;">Esto es un parrafo</p><!--En linea-->
+
+<link rel="stylesheet" href="archivo.css" /><!--Meta etiqueta-->
+
+
+<!--Precedencia-->
+!important<!--important-->
+<p style="color: red;">Parrafo</p><!--en linea-->
+#id{ color: red; }<!--id-->
+.class{ color: red; }<!--clase-->
+p { color: red; }<!--etiqueta-->
+
+
+<!--Estilos de listas-->
+list-style-type: none;
+
+<!--Estilos de fuentes-->
+font-size: 16px;
+font-weight: bold;
+text-align: center;
+
+<!--Estilos de fondo-->
+backgorund-color: red;
+background-image: url(img/imagen.jpg);
+
+<!--Tipografias-->
+
+@font-face { <!--Local-->
+    font-family: 'coolvetica';
+    src: url(../fonts/coolvetica.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap'); <!--Google Fonts-->
+p { font-family: 'Poppins', sans-serif; }
