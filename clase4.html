@@ -1,0 +1,138 @@
+<!--
+************************************************************************************
+*******************************  RESUMEN CLASE 4  **********************************
+*******************************  DESARROLLO WEB   **********************************
+************************************************************************************
+-->
+
+
+
+<!--BEM-->
+<main class="main"> <!--Bloque-->
+    <h1 class="main__titulo">TITULO</h1> <!--Elemento-->
+    <section class="main__seccion seccion"> <!--Bloque-->
+        <p class="seccion__parrafo">Parrafo</p> <!--Elemento-->
+        <div class="seccion__contenedor contenedor"> <!--Bloque-->
+            <img class="contenedor__imagen" src="" alt=""> <!--Elemento-->
+            <img class="contenedor__imagen--modificador" src="" alt=""> <!--Modificador-->
+        </div>
+    </section>
+</main>
+
+
+<!--BOX MODEL-->
+width; <!--Elemento (Ancho)-->
+height; <!--Elemento (Alto)-->
+padding; <!--Relleno (Interno)-->
+margin; <!--Margen (Externo)-->
+border; <!--Borde (Linea entre el relleno y el margen)-->
+
+width: 300px;
+height: 100px;
+padding: 10px 20px 30px 40px;
+margin: 5px 15px 25px 35px;
+
+                                5px
+        ---------------------------------------------------------
+        |                       10px                            |
+        |       ----------------------------------------        |
+        |       |                                      |        |     
+        |       |           width: 300px;              |        |
+    35px| 40px  |           height: 100px;             |  20px  |15px    
+        |       |       border: 1px solid #000;        |        |
+        |       |                                      |        |
+        |       ----------------------------------------        |
+        |                       30px                            |
+        ----------------------------------------------------------
+                                25px
+
+<!--DISPLAY-->
+
+display: block;<!--Usa todo el ancho del contenedor-->
+display: inline;<!--Se alinea al ancho del contenedor-->
+display: inline-block;<!--Mezcla ambos (Util para responsive)-->
+
+
+<!--POSITION-->
+
+position: relative;<!--Es posicionado relativo a si mismo y no afecta el orden de los demas elementos-->
+position: absolute;<!--Es posicionado relativo a su padre (si tiene position relative) y afecta el orden de los demas elementos-->
+position: fixed;<!--Es posicionado en relacion al viewport (pantalla) y "flota" en relacion a otros elementos-->
+position: sticky;<!--Es como una mezcla de relative y fixed, se "pega" cuando el viewport llega a su posicion-->
+z-index; <!--Posiciona los elementos por capas (orden de superposicion)-->
+top; <!--Posiciona el elemento con respecto al borde superior del contenedor-->
+botton; <!--Posiciona el elemento con respecto al borde inferior del contenedor-->
+right; <!--Posiciona el elemento con respecto al borde derecho del contenedor-->
+left; <!--Posiciona el elemento con respecto al borde izquierdo del contenedor-->
+
+                                top
+        ---------------------------------------------------------
+        |                                                       |
+        |       ----------------------------------------        |
+        |       |                                      |        |     
+        |       |                                      |        |
+    left|       |                                      |        |right    
+        |       |                                      |        |
+        |       |                                      |        |
+        |       ----------------------------------------        |
+        |                                                       |
+        ----------------------------------------------------------
+                                bottom
+
+
+
+
+<!-- *****************SUBMENU***************** -->
+
+
+<ul>
+    <li><a href="">Item</a></li>
+    <li><a href="">Item</a></li>
+    <!--Lista del submenu-->
+    <li><a href="">Item</a><!--Apertura de lista de submenu-->
+        <ul><!--Submenu-->
+            <li><a href="">Subitem</a></li>
+            <li><a href="">Subitem</a></li>
+        </ul>
+    </li><!--Cierre de lista de submenu-->
+    <li><a href="">Item</a></li>
+</ul>
+                                
+<style>
+    /*Menu*/
+    ul { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        background-color: black;
+        height: 100px;
+    }
+    /*Listas menu*/
+    li {
+        width: 25%;
+        position:relative;
+        font-size: 14px
+    }
+    /*Submenu*/
+    ul ul {
+        position: absolute;
+        display: none;
+    }
+    /*Lista submenu*/
+    ul ul li {
+        display: block;
+    }
+    /*Enlaces menu y submenu*/
+    ul li a{
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+    }
+    /*Hover a lista de submenu para mostrar submenu*/
+    ul li:hover ul {
+        display:block;
+    }
+</style>
