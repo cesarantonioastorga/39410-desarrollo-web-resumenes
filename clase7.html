@@ -1,0 +1,39 @@
+<!--
+************************************************************************************
+*******************************  RESUMEN CLASE 7  **********************************
+*******************************  DESARROLLO WEB   **********************************
+************************************************************************************
+-->
+
+<!--GRID-->
+grid-column-start;<!--Columna donde inicia(Borde)-->
+grid-column-end;<!--Columna donde finaliza(Borde)-->
+grid-row-start;<!--Fila donde inicia(Borde)-->
+grid-row-end;<!--Fila donde finaliza(Borde)-->
+start --> end: span;<!--Ininia en A, y finaliza en A+B(Hacia la derecha)--> 
+A----------------->B
+end --> start: span;<!--Ininia en B, y finaliza en B+A(Hacia la izquierda)-->
+A<-----------------B
+
+
+<!--MEDIA QUERIES-->
+
+Mobile First <!--De telefonos celulares a Desktop-->
+min-width = desde
+@media (min-width: 320px)<!--Telefonos pequeños y estandar-->
+@media (min-width: 480px)<!--Telefonos landscape-->
+@media (min-width: 768px)<!--Tablet pequeñas-->
+@media (min-width: 991px)<!--Tablets estandar, landscape y desktop pequeñas-->
+@media (min-width: 1200px)<!--Desktop estandar-->
+
+Desktop First <!--De Desktop a telefonos celulares-->
+max-width = hasta
+Css normal<!--Desktop estandar-->
+@media (max-width: 1200px)<!--Tablets landscape y desktop pequeñas-->
+@media (max-width: 991px)<!--Tablets estandar-->
+@media (max-width: 768px)<!--Tablet pequeñas y telefonos landscape-->
+@media (max-width: 480px)<!--Telefonos estandar-->
+@media (max-width: 320px)<!--Telefonos pequeños-->
+
+<!--META VIEWPORT-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
