@@ -1,0 +1,45 @@
+<!--
+************************************************************************************
+*******************************  RESUMEN CLASE 8  **********************************
+*******************************  DESARROLLO WEB   **********************************
+************************************************************************************
+-->
+
+<!--GRADIANTES-->
+background / background-image;
+linear-gradient;<!--Gradiantes de tipo lineal-->
+to top, bottom, left y right; <!--Direcion del gradiante-->
+red, blue; <!--Colores del gradiante-->
+0%, 100%;<!--Porcentaje de donde comienza el gradiante-->
+45deg;<!--Angulo del gradiante-->
+radial-gradient;<!--Gradiante radial (circulo)-->
+
+<!--TRANSFORMACIONES-->
+translate; <!--Trasladar los elementos en el eje X, Y-->
+rotate; <!--Rotar en los ejes X, Y y Z asignando grados (deg)-->
+scale; <!--Zoom al elemento en sus ejes X, Y (valor 1, valor 2) Valor por defecto 1-->
+skew; <!--Perspectiva (Tiene flow)-->
+
+<!--TRANSICIONES-->
+:hover <!--Cuando el mouse pasa por encima del elemento-->
+:focus <!--Foco de una entrada de texto-->
+transition; <!--Transicion entre los dos estados de un elemento--> https://developer.mozilla.org/en-US/docs/Web/CSS/transition
+
+<!--ANIMACION-->
+@keyframe nombre <!--Time line de la animacion y su nombre-->
+procetaje{propiedad} <!--Porcentaje de tiempo y sus propiedades (que hace)-->
+
+<!--Propiedades para la animacion (tiempos)-->
+animation-name: nombre; <!--Nombre definido-->
+animation-iteration-count: infinite; <!--Numero de repeticiones antes de detenerse-->
+animation-timing-function: ease-in; <!--Como progresa la animacion-->
+https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function
+animation-duration: 2s;<!--Cuanto dura la animacion en cada repeticion-->
+animation-delay: 10s; <!--Cuanto demora en ejecutarse-->
+
+<!--ANIMACIONES BIBLIOTECA-->
+https://animate.style <!--Biblioteca CSS-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/><!--CDN-->
+animate__animated <!--Clase por defecto-->
+animate__bounce<!--Clase de la animacion-->
+class="animate__animated animate__bounce"<!--Como deberia estar definida la clase en el elemento que deseo animar-->
