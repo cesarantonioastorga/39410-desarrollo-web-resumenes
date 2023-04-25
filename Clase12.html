@@ -1,0 +1,56 @@
+<!--
+************************************************************************************
+*******************************  RESUMEN CLASE 12 **********************************
+*******************************  DESARROLLO WEB   **********************************
+************************************************************************************
+-->
+
+<!--SASS-->
+Syntactically Awesome Stylesheets
+Dos tipos de sintaxis:
+SASS / SCSS (Sassy CSS) <!--SCSS es muy similar a la sintaxis nativa de CSS-->
+
+<!--INSTALACION-->
+<!--Node-->
+Descargamos e instalamos node
+Creamos nuestro archivo scss
+Creamos el package.json con npm init -y
+Ejecutamos npm install -g sass e instalamos sass 
+Compilamos con sass --watch scss:css
+CTRL + C <!--Detiene la compilacion-->
+
+<!--Live Sass Compiler-->
+Instalamos la extension
+Creamos el scss 
+Creamos la ruta donde se creara el css <!--Settings de la extension-->
+Compilamos ejecutando la extension
+
+
+<!--SINTAXIS-->
+<!--Nesting o anidación-->
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    padding: 15px;
+    p {
+        font-size: 20px;
+        color: white;
+        font-family: Arial, sans-serif;
+        &:hover{ <!--Anidar una pseudo clase o pseudo elemento-->
+            color: red;
+        }
+    }
+}
+
+<!--VARIABLES-->
+$variable: red; <!--Declaramos la variable-->
+color: $variable; <!--Usamos la variable-->
+
+<!--OPERACIONES-->
+$ancho: 500px; <!--Declaramos la variables-->
+width: $ancho/2; <!--Usamos el operador / dandonos un resultado de 250 px-->
+
+<!--Partials-->
+_partial.scss <!--Asignamos nuestros estilos en el partial del elemento o pagina-->
+@import 'partial'; <!--importamos a nuestro scss principal para luego compilar-->

@@ -1,0 +1,99 @@
+<!--
+************************************************************************************
+*******************************  RESUMEN CLASE 13 **********************************
+*******************************  DESARROLLO WEB   **********************************
+************************************************************************************
+-->
+
+<!--CONDICIONALES-->
+$red: facebook;
+
+@if $red == facebook{
+    header{
+        background-color: red;
+    }
+}
+
+
+<!--Si la condicion es verdadera, haz esto-->
+@else if <!--Sino, si esta condicion es verdadera, haz esto otro-->
+@else <!--Sino, haz esto-->
+
+<!--BUCLES-->
+@for $i from 1 through 10 { <!--through considera el utlimo ciclo, to no lo conisdera-->
+	.contenedor-#{$i}{
+	    width:10% * $i;
+	}
+}
+
+<!--EACH-->
+@each $color in blue, yellow, black { <!--Se aplica un ciclo para cada elemento-->
+	.#{$color}{
+	color:#{$color};
+	}
+}
+
+let alumnos = [
+    {nombre: "Jheremias", apellido: "Rivas"},
+    {nombre: "Enzo", apellido: "Zanino"}
+]
+
+<!--MAPS-->
+$redes: ( <!--Declaramos el mapa-->
+    twitter: #55acee,
+    facebook:  #3a5795,
+    send-mail: #C25E30
+);
+
+@each $red, $color in $redes { <!--Lo recorremos con each-->
+    .btn--#{$red} {
+        background-color: $color;
+    }
+}
+
+$estilos: ( <!--Declaramos el mapa-->
+    color: #3673D9,
+    centro: center,
+    tFuente: 35px,
+    1rem : 1rem
+);
+
+div {
+    background-color: map-get($estilos, color); <!--Llamamos la propiedad con map-get y pasamos como parametro la variable y la key-->
+    text-align: map-get($estilos, centro);
+    padding: map-get($estilos, 1rem);
+    font-size:map-get($estilos, tFuente);
+}
+
+<!--EXTEND-->
+.flex-center{ <!--declaramos una clase-->
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-1{
+    @extend .flex-center; <!--Extendemos la clase con extend-->
+    background-color: red;
+}
+
+%flex-center{ <!--declaramos las propiedades con % (placeholder selector)-->
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-1{
+    @extend %flex-center; <!--Extendemos las propiedades con extend-->
+    background-color: red;
+}
+
+<!--La diferencia es esta en que la clase puede editarse en cualquier parte del codigo el placeholder no, evitando duplicididad. Tambien reduce el consumo de recursos-->
+
+<!--MIXIN-->
+@mixin sizes($width, $height) { <!--Definimos los parametros-->
+    height: $height;
+    width: $width;
+}
+.box {
+    @include sizes(500px, 450px); <!--Pasamos lo valores a traves de los parametros-->
+}
+
